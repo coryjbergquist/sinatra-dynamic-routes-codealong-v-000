@@ -24,7 +24,9 @@ class App < Sinatra::Base
     @num = params.values.map do |val|
       val.to_i
     end
-    @num.inject(:*)
+    product = @num.inject(:*)
+    product.to_s
+
   end
 
 

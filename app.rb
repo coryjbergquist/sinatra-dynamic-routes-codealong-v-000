@@ -26,7 +26,6 @@ class App < Sinatra::Base
     end
     product = @num.inject(:*)
     product.to_s
-
   end
 
 

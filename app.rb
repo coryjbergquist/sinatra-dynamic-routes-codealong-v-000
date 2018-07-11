@@ -21,8 +21,10 @@ class App < Sinatra::Base
   end
 
   get "/multiply/:num1/:num2" do
-    @num = params[:num]
-    binding.pry
+    @num = params.values.map do |val| 
+      val.to_i 
+    end
+    @num.inject(:*)
   end
 
 
